@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+<body>
+<div class="row clearfix">
+        <div class="col-md-8 col-md-offset-0">
+            <h1>User List</h1>
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr class="success">
+                    <th >username</th>
+                        <border th:text="${columnname}"></border>
+                    </th>
+                    <th >password</th>
+                        <border th:text="${columnname}"></border>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="userinfo : ${userlist}">
+                    <td th:text="${userinfo.getRtcname()}"></td>
+                    <td th:text="${userinfo.getTrelloname()}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
